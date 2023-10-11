@@ -42,7 +42,7 @@ popupButtons[1].addEventListener('click', (e) => {
 let works = [];
 
 const loadProfile = async () => {
-  let res = await fetch('profile.json');
+  let res = await fetch('https://febryanshino.github.io/portfolio/profile.json');
   let data = await res.json();
 
   const name = document.querySelector('nav > div > .title');
@@ -98,7 +98,7 @@ moreOption.addEventListener('click', (e) => {
 
 
 const loadDatabase = async (type) => {
-  let res = await fetch(`data/${type}.csv`);
+  let res = await fetch(`https://febryanshino.github.io/portfolio/data/${type}.csv`);
   let data = (await res.text()).split('\n');
   if (data.slice(1) == '') {
     return [];
