@@ -1,0 +1,220 @@
+.preview {
+  z-index: 10002;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-1);
+  position: fixed;
+  padding: 0 1.5rem;
+  overflow-y: auto;
+  --border: .05rem solid var(--color-2);
+}
+
+
+.preview > .nav {
+  width: calc(100% + 3rem);
+  height: 4rem;
+  margin: 0 -1.5rem;
+  padding-left: 1rem;
+  color: var(--color-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.preview > .nav > a {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.preview > .nav > a > div {
+  height: .27rem;
+  width: 50%;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background: var(--color-3);
+  border-radius: .05rem;
+}
+
+.preview > .nav > a > div:first-child {
+  transform: rotate(45deg);
+}
+.preview > .nav > a > div:last-child {
+  transform: rotate(-45deg);
+}
+
+
+.preview > .header {
+  border-bottom: var(--border);
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preview > .header > h3 {
+  font-size: 1.6rem;
+  color: var(--color-4);
+}
+
+
+.preview > .header > div {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.preview > .header > div > a {
+  width: 35%;
+  height: 100%;
+  border-radius: calc(2.5rem/2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-3);
+  background: var(--color-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.preview > .artist {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: var(--border);
+}
+
+.preview > .artist > div:first-child {
+  display: flex;
+  gap: .5rem;
+}
+
+.preview > .artist > div:last-child {
+  font-size: 1.3rem;
+  border: .01rem solid red;
+  border-radius: 1rem;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    
+.preview > .artist > div:first-child > .img {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  background: var(--profile-pic);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.preview > .artist > div:first-child > .name {
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-3);
+  font-weight: 500;
+}
+
+.preview > .artist > div:first-child > .name > span {
+  height: 100%;
+  width: auto;
+}
+
+.preview > .artist > div:first-child > .name > span:last-child {
+  background: var(--color-2);
+  border-radius: .2rem;
+  padding: 0 1rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+
+.preview > .picture {
+  padding: 4rem 1.25rem;
+  width: 100%;
+  height: auto;
+  border-bottom: var(--border);
+}
+
+.preview > .picture > img {
+  width: 100%;
+  height: auto;
+}
+
+
+.preview > .description {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  height: auto;
+  border-bottom: var(--border);
+}
+
+.preview > .description > p {
+  font-weight: 360;
+  font-size: .8rem;
+}
+
+.preview > .other-work {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  padding: 1.3rem 0;
+  width: 100%;
+  height: auto;
+}
+
+
+.preview > .other-work > div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: 13rem;
+  overflow-x: auto;
+}
+
+.preview > .other-work > div > a {
+  height: 100%;
+  aspect-ratio: 16/13;
+  text-decoration: none;
+  color: var(--color-4);
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.preview > .other-work > div > a > div {
+  height: 80%;
+  width: 100%;
+  border-radius: .3rem;
+  box-shadow: -.1rem .1rem .4rem rgba(0,0,0,.3);
+}
