@@ -1,3 +1,19 @@
+/*
+const audio = document.createElement('audio');
+audio.src = '/audio.mp3'
+audio.play();
+
+audio.addEventListener('loadeddata', () => {
+  console.log(audio.duration)
+  audio.currentTime = 75;
+});
+
+
+audio.addEventListener('ended', () => {
+  alert('pluire')
+})
+*/
+
 const redirectElement = document.querySelector('.redirect');
 const popupElement = document.querySelector('.popup');
 const closePopup = () => {
@@ -282,9 +298,10 @@ const loadOtherWorks = () => {
     item.href = '#';
 
     item.addEventListener('click', (e) => {
+      e.preventDefault();
       previewPage.scroll({
         top: 0,
-        behavior: 'auto'
+        behavior: 'smooth'
       });
       openPreview(work[0], work[3], work[2], work[1]);
     });
